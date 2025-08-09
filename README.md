@@ -1,4 +1,4 @@
-# ESP32_Canopus Module Quick Start Guide
+# ESP32 Module Quick Start Guide
 
 ## ✌️✌️ Welcome! ✌️✌️  
 Hi, im Namnam 🕴🏼.  
@@ -10,7 +10,7 @@ height="30" width="40" /></a>
 </p>
 
 
-### Information ESP32_Canopus board  
+### Information ESP32 board  
   
 #### 🕵🏻‍♀️Version 1.0  
 |     **Object**    |      **Detail conponent**      |          **Note**     |
@@ -47,7 +47,7 @@ height="30" width="40" /></a>
   ![image](https://user-images.githubusercontent.com/49629370/235331088-db8737b9-3053-4350-bb5f-e3c348a513bb.png)  
     
     
-## At here , you are ready 👌 to execute the sample code for the ESP32_CANOPUS board  
+## At here , you are ready 👌 to execute the sample code for the ESP32 board  
 ####  ⚠️ WARNING: Prepare yourself a cup of coffee ☕☕☕, because the next is a fascinating journey with Canopus board 🤪.   
 You will be stronger after working through the next 12 examples.  
 #### [Blink led](#Blink)
@@ -80,27 +80,27 @@ void loop() {
   delay(1000);                       // wait for a second
 }
 ```
-You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32_CANOPUS/tree/master/examples)  
+You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)  
 #### Modbus_Slave
-You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32_CANOPUS/tree/master/examples)  
+You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)  
 #### 3. Read modbus slave via TCP/IP  
-You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32_CANOPUS/tree/master/examples)  
+You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)  
 #### 4. Serve master RTU (board is slave)  
-You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32_CANOPUS/tree/master/examples)  
+You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)  
 #### 5. Serve master TCP/IP (board is slave)  
-You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32_CANOPUS/tree/master/examples)  
+You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)  
 #### 6. Auto switch WiFi-Ethernet  
-You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32_CANOPUS/tree/master/examples)  
+You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)  
 #### 7. Auto switch many WiFi in list  
-You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32_CANOPUS/tree/master/examples)  
+You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)  
 #### 8. Push value modbus to MQTT  
-You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32_CANOPUS/tree/master/examples)  
+You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)  
 #### 9. On/off led via MQTT  
-You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32_CANOPUS/tree/master/examples)  
+You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)  
 #### 10. FOTA - update firmware via Internet with FTP  
-You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32_CANOPUS/tree/master/examples)  
+You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)  
 #### 11. WATCHDOG timmer  
-You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32_CANOPUS/tree/master/examples)  
+You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)  
 #### 12. Deep sleep  
-You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32_CANOPUS/tree/master/examples)  
+You can find it in examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)  
 
