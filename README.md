@@ -25,15 +25,15 @@ height="30" width="40" /></a>
 Download examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)  
 [Blink led](#Blink-led)  
 [Read modbus slave via RTU](#Modbus-slave-RTU)  
-[Read modbus slave via TCP/IP](#slave-TCP/IP)  
-[Serve master RTU](#master-TCP/IP)  
-[Serve master TCP/IP](#master-TCP/IP)  
-[Auto switch WiFi_Ethernet](#WiFi-Ethernet)  
-[Auto switch many WiFi in list](#multi-WiFi)  
-[Push value modbus to MQTT](#modbus-MQTT)  
-[On/off led via MQTT](#MQTT)  
-[FOTA - update firmware via Internet with FTP](#FOTA)  
-[WATCHDOG timmer](#WATCHDOG)  
+[Read modbus slave via TCP/IP](#Modbus-slave-TCP/IP)  
+[Serve master RTU](#Modbus-master-RTU)  
+[Serve master TCP/IP](#Modbus-master-TCP/IP)  
+[Auto switch WiFi_Ethernet](#Auto-switch-WiFi-Ethernet)  
+[Auto switch many WiFi in list](#Auto-switch-many-WiFi-in-list)  
+[Push value modbus to MQTT](#Push-value-modbus-to-MQTT)  
+[On/off led via MQTT](#On/off-led-via-MQTT)  
+[FOTA - update firmware via Internet with FTP](#FOTA-update-firmware-via-Internet-with-FTP)  
+[WATCHDOG timmer](#WATCHDOG-timmer)  
 [Deep sleep](#Deep-sleep)  
 
 #### Blink led  
@@ -54,7 +54,7 @@ void loop() {
 }
 ```
 
-#### Modbus slave RTU (board is slave)  
+#### Modbus slave RTU
 
 ```c
 #include <ModbusRTU.h>
@@ -87,7 +87,7 @@ void loop() {
   mb.task();
 }
 ```
-#### Modbus slave TCP/IP (board is slave)  
+#### Modbus slave TCP/IP
 
 ```c
 #include <ETH.h>
@@ -249,7 +249,7 @@ void loop() {
 }  
 ```
 
-#### FOTA - update firmware via Internet with FTP  
+#### FOTA update firmware via Internet with FTP  
 
 ```c
 Update late
