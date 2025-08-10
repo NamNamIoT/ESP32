@@ -23,8 +23,8 @@ height="30" width="40" /></a>
 |       Button      | -                              | PIN IO36              |
 
 Download examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)  
-[Blink led](#Blink)  
-[Read modbus slave via RTU](#slave-RTU)  
+[Blink led](#Blink-led)  
+[Read modbus slave via RTU](#Modbus-slave-RTU)  
 [Read modbus slave via TCP/IP](#slave-TCP/IP)  
 [Serve master RTU](#master-TCP/IP)  
 [Serve master TCP/IP](#master-TCP/IP)  
@@ -36,7 +36,7 @@ Download examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/exa
 [WATCHDOG timmer](#WATCHDOG)  
 [Deep sleep](#Deep-sleep)  
 
-#### Blink  
+#### Blink led  
 
 ```c
 #define LED_YELLOW 2 //Pin led color yellow is IO2
