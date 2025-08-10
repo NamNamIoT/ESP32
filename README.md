@@ -16,14 +16,12 @@ height="30" width="40" /></a>
 |     **Object**    |      **Detail conponent**      |          **Note**     |
 | ----------------- | ------------------------------ | ----------------------|
 |        Power      | MC34063A                       | 5-35VDC               |
-|       Ethernet    | LAN8720A  (RJ45: HR911105A)    | -                     |
+|       Ethernet    | LAN8720A  (RJ45: HR911105A)    | Ethernet RMII 10/100  |
 |        RS485      | SP485EE                        | Serial2, auto DERE    |
-|         I2C       | -                              | SDA = IO33, SCL = IO4 |
+|         I2C       | Pull up 4.7k                   | SDA = IO33, SCL = IO4 |
 |      Led blue     | -                              | PIN IO15              |
 |      Led yellow   | -                              | PIN IO2               |
 |       Button      | -                              | PIN IO36              |
-|       ESP32       | ESP32 WROOM 32D                | -                     |
-|       Case        | Plastic                        | Mount dinrail         |  
 
 #### 🧑🏻‍🔧 Hardware Setup 
 -Cable USB type C for power and upload code.  
@@ -48,8 +46,6 @@ height="30" width="40" /></a>
     
     
 ## At here , you are ready 👌 to execute the sample code for the ESP32 board  
-####  ⚠️ WARNING: Prepare yourself a cup of coffee ☕☕☕, because the next is a fascinating journey with Canopus board 🤪.   
-You will be stronger after working through the next 12 examples.  
 #### [Blink led](#Blink)
 #### [Read modbus slave via RTU](#Modbus_Slave)
 Read modbus slave via TCP/IP  
