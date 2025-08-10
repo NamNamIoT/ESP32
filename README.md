@@ -2,7 +2,6 @@
 
 ## ✌️✌️ Welcome! ✌️✌️  
 Hi, im Namnam 🕴🏼.  
-Please contact me if you need to develop ioT products.  
 <p align="left">
 <a href="https://fb.com/kuem0912" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="kuem0912" 
 height="30" width="40" /></a>
