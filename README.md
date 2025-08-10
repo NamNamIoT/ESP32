@@ -24,17 +24,17 @@ height="30" width="40" /></a>
 
 Download examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)  
 #### [Blink led](#Blink)
-#### [Read modbus slave via RTU](#Modbus_Slave)
-Read modbus slave via TCP/IP  
-Serve master RTU  
-Serve master TCP/IP  
-Auto switch WiFi-Ethernet  
-Auto switch many WiFi in list  
-Push value modbus to MQTT  
-On/off led via MQTT  
-FOTA - update firmware via Internet with FTP  
-WATCHDOG timmer  
-Deep sleep  
+#### [Read modbus slave via RTU](#slave_RTU)
+#### [Read modbus slave via TCP/IP](#slave_TCP/IP)  
+#### [Serve master RTU](#master_TCP/IP)    
+#### [Serve master TCP/IP](#master_TCP/IP)    
+#### [Auto switch WiFi_Ethernet](#WiFi_Ethernet)    
+#### [Auto switch many WiFi in list](#multi_WiFi)    
+#### [Push value modbus to MQTT](#modbus_MQTT)    
+#### [On/off led via MQTT](#MQTT)    
+#### [FOTA - update firmware via Internet with FTP](#FOTA)    
+#### [WATCHDOG timmer](#WATCHDOG)    
+#### [Deep sleep](#Deep_sleep)    
 
 #### 1. Blink  
 
@@ -54,7 +54,7 @@ void loop() {
 }
 ```
 
-#### 2. Modbus_Slave
+#### 2. Modbus slave_RTU (board is slave)  
 
 ```c
 #include <ModbusRTU.h>
@@ -72,24 +72,6 @@ void loop() {
 }
 ```
 
-#### 3. Read modbus slave via TCP/IP  
-
-```c
-#include <ETH.h>
-#include <ModbusIP_ESP8266.h>
-ModbusIP mb;
-void setup() {
-  ETH.begin(); // LAN8720A Ethernet
-  mb.server(); // Run as Modbus TCP server (slave)
-  mb.addCoil(0, false);
-}
-void loop() {
-  mb.task();
-}
-```
-
-#### 4. Serve master RTU (board is slave)  
-
 ```c
 #include <ModbusRTU.h>
 #define DERE_PIN -1
@@ -105,8 +87,21 @@ void loop() {
   mb.task();
 }
 ```
+#### 3. Modbus slave_TCP/IP (board is slave)  
 
-#### 5. Serve master TCP/IP (board is slave)  
+```c
+#include <ETH.h>
+#include <ModbusIP_ESP8266.h>
+ModbusIP mb;
+void setup() {
+  ETH.begin(); // LAN8720A Ethernet
+  mb.server(); // Run as Modbus TCP server (slave)
+  mb.addCoil(0, false);
+}
+void loop() {
+  mb.task();
+}
+```
 
 ```c
 #include <ETH.h>
@@ -122,7 +117,15 @@ void loop() {
 }
 ```
 
-#### 6. Auto switch WiFi-Ethernet  
+#### 4. Modbus master_RTU
+
+
+
+#### 5. Modbus master_TCP/IP
+
+
+
+#### 6. Auto switch WiFi_Ethernet  
 
 ```c
 #include <WiFi.h>
@@ -268,7 +271,7 @@ void loop() {
 }
 ```
 
-#### 12. Deep sleep  
+#### 12. Deep_sleep  
 
 ```c
 #define uS_TO_S_FACTOR 1000000
