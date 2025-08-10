@@ -36,7 +36,7 @@ Download examples: [Download](https://github.com/NamNamIoT/ESP32/tree/master/exa
 [WATCHDOG timmer](#WATCHDOG)  
 [Deep sleep](#Deep-sleep)  
 
-#### 1. Blink  
+#### Blink  
 
 ```c
 #define LED_YELLOW 2 //Pin led color yellow is IO2
@@ -54,7 +54,7 @@ void loop() {
 }
 ```
 
-#### 2. Modbus slave RTU (board is slave)  
+#### Modbus slave RTU (board is slave)  
 
 ```c
 #include <ModbusRTU.h>
@@ -87,7 +87,7 @@ void loop() {
   mb.task();
 }
 ```
-#### 3. Modbus slave TCP/IP (board is slave)  
+#### Modbus slave TCP/IP (board is slave)  
 
 ```c
 #include <ETH.h>
@@ -117,15 +117,15 @@ void loop() {
 }
 ```
 
-#### 4. Modbus master RTU
+#### Modbus master RTU
 
 
 
-#### 5. Modbus master TCP/IP
+#### Modbus master TCP/IP
 
 
 
-#### 6. Auto switch WiFi Ethernet  
+#### Auto switch WiFi Ethernet  
 
 ```c
 #include <WiFi.h>
@@ -161,7 +161,7 @@ void loop() {
 }
 ```
 
-#### 7. Auto switch many WiFi in list  
+#### Auto switch many WiFi in list  
 
 ```c
 #include <WiFi.h>
@@ -188,7 +188,7 @@ void loop() {
 }
 ```
 
-#### 8. Push value modbus to MQTT  
+#### Push value modbus to MQTT  
 
 ```c
 #include <ModbusRTU.h>
@@ -221,7 +221,7 @@ void loop() {
 }
 ```
 
-#### 9. On/off led via MQTT  
+#### On/off led via MQTT  
 
 ```c
 #include <WiFi.h>
@@ -249,13 +249,13 @@ void loop() {
 }  
 ```
 
-#### 10. FOTA - update firmware via Internet with FTP  
+#### FOTA - update firmware via Internet with FTP  
 
 ```c
 Update late
 ```
 
-#### 11. WATCHDOG timmer  
+#### WATCHDOG timmer  
 
 ```c
 #include <esp_task_wdt.h>
@@ -271,7 +271,7 @@ void loop() {
 }
 ```
 
-#### 12. Deep sleep  
+#### Deep sleep  
 
 ```c
 #define uS_TO_S_FACTOR 1000000
