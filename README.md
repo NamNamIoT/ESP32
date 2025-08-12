@@ -15,7 +15,7 @@ height="30" width="40" /></a>
 |     **Object**    |      **Detail conponent**      |          **Note**     |
 | ----------------- | ------------------------------ | ----------------------|
 |        Power      | MC34063A                       | 5-35VDC               |
-|       Ethernet    | LAN8720A  (RJ45: HR911105A)    | Ethernet RMII 10/100  |
+|       Ethernet    | LAN8720A  (RJ45: HR911105A)    | Ethernet RMII 10/100M  |
 |        RS485      | SP485EE                        | Serial2, auto DERE    |
 |         I2C       | Pull up 4.7k                   | SDA = IO33, SCL = IO4 |
 |      Led blue     | -                              | PIN IO15              |
@@ -120,13 +120,93 @@ void loop() {
 #### Modbus master RTU
 
 ```c
+#include "Canopus_Modbus.h"
+ModbusMaster node;
 
+void setup()
+{
+  Serial.begin(115200);
+  Serial.print("\r\n*****************CANOPUS BOARD*******************");
+  Serial_Canopus.begin(9600, SERIAL_8N1); 
+  node.begin(1, Serial_Canopus); //ID node 1
+}
+void loop()
+{ 
+  Serial.println("");
+  Serial.println("Wait Read");
+  uint8_t result;
+  result = node.readHoldingRegisters(1, 3);//Read 40001, 40002, 40003
+  delay(10);
+  if (result == node.ku8MBSuccess) //Read ok
+  {
+    uint16_t data[3];
+    data[0]=node.getResponseBuffer(0);
+    data[1]=node.getResponseBuffer(1);
+    data[2]=node.getResponseBuffer(2);
+    Serial.printf("\r\nValue 40001: %d",data[0]);
+    Serial.printf("\r\nValue 40002: %d",data[1]);
+    Serial.printf("\r\nValue 40003: %d",data[2]);
+  }
+  else Serial.print("Read Fail");
+  delay(500); 
+}
 ```
 
 #### Modbus master TCP/IP
 
 ```c
-
+#include <WiFi.h>
+#include "ETH_MB.h"
+#include "ModbusIP_ESP8266.h"
+ModbusIP mb;
+extern bool eth_connected;
+  
+void setup() {
+  pinMode(14, OUTPUT);
+  digitalWrite(14, HIGH); 
+  delay(1000);
+  Serial.begin(115200);
+  Serial.println("\r\nHello\r\n");
+  if(WiFi.status() != WL_CONNECTED&&!eth_connected)
+    {
+      IPAddress local_IP(192, 168, 1, 123);
+      IPAddress gateway(192, 168, 1, 1);
+      IPAddress subnet(255, 255, 255, 0);
+      IPAddress primaryDNS(8, 8, 8, 8); //optional
+      IPAddress secondaryDNS(8, 8, 4, 4); //optional
+      if (!WiFi.config(local_IP, gateway, subnet, primaryDNS, secondaryDNS)) {
+        Serial.printf("\r\nWiFi Failed to configure");
+        }
+    }
+  ETH_begin();
+  delay(5000);
+  WiFi.begin("TEN_WIFI", "PASS_WIFI");
+  while (WiFi.status() != WL_CONNECTED||eth_connected) {
+    delay(500);
+    Serial.print(".");
+  }
+ 
+  Serial.println("");
+  Serial.println("WiFi connected");  
+  Serial.println("IP address: ");
+  if(!eth_connected)
+  Serial.println(WiFi.localIP());
+  else
+  Serial.println(ETH.localIP());
+  mb.begin();
+  mb.addHreg(2, 0);//FC03 040002
+  mb.addIreg(2, 0);//FC04 030002
+}
+ 
+void loop() {
+   mb.task();
+   mb.Hreg(2, 1);//Write value 1 to 040002
+   mb.Ireg(2, 1);//Write value 1 to 030002
+   delay(500);
+   mb.Hreg(2, 0);//Write value 0 to 040002
+   mb.Ireg(2, 1);//Write value 0 to 030002
+   delay(500);
+}
 ```
 
 #### Auto switch WiFi Ethernet  
