@@ -18,7 +18,7 @@ height="30" width="40" /></a>
 |        Power      | MC34063A                       | 5-35VDC               |
 |       Ethernet    | LAN8720A  (RJ45: HR911105A)    | Ethernet RMII 10/100M  |
 |        RS485      | SP485EE                        | Serial2, auto DERE    |
-|         I2C       | Pull up 4.7k                   | SDA = IO33, SCL = IO4 |
+|         I2C       | Pull up 4.7k                   | SDA = IO33, SCL = IO32 |
 |      Led blue     | -                              | PIN IO15              |
 |      Led yellow   | -                              | PIN IO2               |
 |       Button      | -                              | PIN IO36              |
