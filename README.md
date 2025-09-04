@@ -23,7 +23,7 @@ height="30" width="40" /></a>
 |      Led yellow   | -                              | PIN IO2               |
 |       Button      | -                              | PIN IO36              |
 
-🚀🚀🚀Download examples: 🐞[Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)🐞  
+🚀Download examples: 🐞[Download](https://github.com/NamNamIoT/ESP32/tree/master/examples)🐞  
 [Blink led](#Blink-led)  
 [Read modbus slave via RTU](#Modbus-slave-RTU)  
 [Read modbus slave via TCP/IP](#Modbus-slave-TCP/IP)  
@@ -36,6 +36,9 @@ height="30" width="40" /></a>
 [FOTA - update firmware via Internet with FTP](#FOTA-update-firmware-via-Internet-with-FTP)  
 [WATCHDOG timmer](#WATCHDOG-timmer)  
 [Deep sleep](#Deep-sleep)  
+
+🚀🚀🚀 We are preparing for the first release of the tool that supports the configuration of registers and read addresses of modbus RTU, TCP-IP and other configuration of accs information such as wifi name and password, MQTT.
+Users please wait until 5-Oct to download.  
 
 #### Blink led  
 
