@@ -37,8 +37,8 @@ height="30" width="40" /></a>
 [WATCHDOG timmer](#WATCHDOG-timmer)  
 [Deep sleep](#Deep-sleep)  
 
-🚀🚀🚀 We are preparing for the first release of the tool that supports the configuration of registers and read addresses of modbus RTU, TCP-IP and other configuration of accs information such as wifi name and password, MQTT.
-Users please wait until 5-Oct to download.  
+### 🚀🚀Note🚀🚀:
+We are preparing for the first release of the tool that supports the configuration of registers and read addresses of modbus RTU, TCP-IP and other configuration of accs information such as wifi name and password, MQTT. Users please wait until 5-Oct to download.
 
 #### Blink led  
 
